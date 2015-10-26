@@ -35,7 +35,8 @@ class NonEmpty(elem: Int, left: IntSet, right: IntSet) extends IntSet {
 }
 
 object intsets extends App{
-  val t1 = new NonEmpty(3)
+  val t1 = new NonEmpty(3) incl 7 incl 1
   val t2 = t1 incl 4 incl 2 incl 6 incl 4 incl 10 incl 8
-  println(t2)
+  val t3 = new NonEmpty(12) incl 3 incl 4 incl 11 incl 14 incl 13 incl 5 incl 2
+  println(t2, t3, t2 union t3)
 }
