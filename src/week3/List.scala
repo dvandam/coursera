@@ -6,6 +6,7 @@ trait List[+T] {
   def isEmpty: Boolean
   def head: T
   def tail: List[T]
+  def prepend[U >: T](elem: U): List[U] = new Cons(elem, this)
 }
 
 object List {
@@ -26,6 +27,7 @@ object Nil extends List[Nothing] {
 
 object test {
   val x: List[String] = Nil
+  def f(xs: List[NonEmpty], x: Empty)  = xs prepend x
 }
 
 object nth extends App {
