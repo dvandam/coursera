@@ -25,10 +25,10 @@ object Nil extends List[Nothing] {
   def tail: Nothing = throw new NoSuchElementException("Nil.tail")
 }
 
-object test {
-  val x: List[String] = Nil
-  def f(xs: List[NonEmpty], x: Empty)  = xs prepend x
-}
+//object test {
+//  val x: List[String] = Nil
+//  def f(xs: List[NonEmpty], x: Empty)  = xs prepend x
+//}
 
 object nth extends App {
   def singleton[T](elem: T) = new Cons[T](elem, Nil)
